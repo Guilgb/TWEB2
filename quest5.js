@@ -1,0 +1,1 @@
+let fatorial = parseInt(prompt('Digite um número: '));

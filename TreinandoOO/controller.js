@@ -1,5 +1,4 @@
-export {ControllerCarro};
-import { RepositoryCarro } from "./repository";
+import require.{ RepositoryCarro } from "./repository";
 
 class ControllerCarro{
     repository = new RepositoryCarro;
@@ -7,8 +6,10 @@ class ControllerCarro{
     registerCarro(carro){
         this.repository.registerRepository(carro);
     }
-
+    
     listarCarro(){
         this.repository.listarRepository()
     }
 }
+
+export {ControllerCarro};

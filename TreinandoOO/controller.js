@@ -1,15 +1,12 @@
-import require.{ RepositoryCarro } from "./repository";
-
+import { RepositoryCarro } from "./repository";
 class ControllerCarro{
     repository = new RepositoryCarro;
-    
-    registerCarro(carro){
-        this.repository.registerRepository(carro);
+
+    registerController(Carro){
+        this.repository.registerRepository(Carro);
     }
-    
-    listarCarro(){
+
+    listarController(){
         this.repository.listarRepository()
     }
 }
-
-export {ControllerCarro};

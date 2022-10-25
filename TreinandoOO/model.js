@@ -3,22 +3,19 @@ class Carro{
         this.modelo = modelo;
         this.ano = ano;
     }
-    
-    get modelo(){
+
+    getModelo(){
         return this.modelo;
     }
-    
-    set modelo(modelo){
+    setModelo(modelo){
         this.modelo = modelo;
     }
-    
-    get ano(){
+
+    getAno(){
         return this.ano;
     }
-    
-    set ano(ano){
+    setAno(ano){
         this.ano = ano;
     }
-}
 
-export {Carro};
+}

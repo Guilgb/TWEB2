@@ -1,12 +1,13 @@
-import { RepositoryCarro } from "./repository.mjs";
+import RepositoryCarro from "./repository.mjs";
 class ControllerCarro{
     repository = new RepositoryCarro;
-
+    
     registerController(Carro){
         this.repository.registerRepository(Carro);
     }
-
+    
     listarController(){
-        this.repository.listarRepository()
+        this.repository.listarRepository();
     }
 }
+export default ControllerCarro;

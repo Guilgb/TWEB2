@@ -1,81 +1,53 @@
-class endereco{
-    constructor(rua, numero){
-        this.rua = rua;
-        this.numero = numero;
+class Carro{
+    constructor(modelo, ano){
+        this.modelo = modelo;
+        this.ano = ano;
+    }
+    getMoelo(){
+        return this.modelo;
+    }
+    setModelo(modelo){
+        this.modelo = modelo;
     }
 
-    getRua(){
-        return this.rua
-    }
-    setRua(rua){
-        this.rua = rua;
+    getCarro(){
+        return this.carro;
     }
 
-    getNumero(){
-        return this.numero;
-    }
-
-    setNumero(numero){
-        this.numero = numero;
-    }
-}
-
-class Pessoa extends endereco{
-    constructor(nome, idade) {
-        super();
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    getNome(){
-        return this.nome;
-    }
-    setNome(nome){
-        this.nome = nome;
-    }
-
-    getIdade(){
-        return this.idade;
-    }
-    setIdade(idade){
-        this.nome = idade;
-    }
-
-    #nada(){
-        return 'Essa nomenclatura diz que esse metodo é privado a somente essa classe'
+    setCarro(carro){
+        this.carro = carro;
     }
 }
 
-class Controller{
-    repository = new Repository;
+class ControllerCarro{
+    repostoryController = new RepositoryCarro();
 
-    registerController(Pessoa){
-        this.repository.registerRepository(Pessoa);
-    }
-    listarController(){
-        this.repository.listarRepository()
-    }
-}
-
-class Repository{
-    pessoas = []
-
-    registerRepository(Pessoa){
-        this.pessoas.push(Pessoa);
+    addCarro(Carro){
+        this.repostoryController.repositoryRegister(Carro);
     }
 
-    listarRepository(){
-       console.log(this.pessoas);
+    listCarro(){
+        this.repostoryController.repositoryList()
     }
 }
 
-p2 = new Pessoa('Rubens', 24);
-p1 = new Pessoa('Guilherme', '23');
-pc = new Controller;
+class RepositoryCarro{
+    carros = []
 
-p1.setNumero(316);
-p1.setRua('Pedro Lopes');
+    repositoryRegister(Carro){
+        this.carros.push(Carro);
+    }
 
-pc.registerController(p2);
-pc.registerController(p1);
-pc.listarController();
+    repositoryList(){
+        console.log(this.carros)
+    }
+}
+
+
+carro = new Carro('Corsa', 2010);
+
+controller = new ControllerCarro();
+
+controller.addCarro(carro);
+
+controller.listCarro();

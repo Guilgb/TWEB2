@@ -1,4 +1,4 @@
-import { RepositoryCarro } from "./repository";
+import { RepositoryCarro } from "./repository.mjs";
 class ControllerCarro{
     repository = new RepositoryCarro;
 

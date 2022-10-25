@@ -1,5 +1,5 @@
-import {Carro} from "./model";
-import {ControllerCarro} from "./controller";
+import {Carro} from "./model.mjs";
+import {ControllerCarro} from "./controller.mjs";
 
 c = new Carro('Cobalt', 2014);
 

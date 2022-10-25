@@ -9,5 +9,4 @@ class RepositoryCarro{
         console.log(this.carros)
     }
 }
-
 export default RepositoryCarro;

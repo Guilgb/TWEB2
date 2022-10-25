@@ -19,4 +19,4 @@ class Carro{
     }
     
 }
-export default {Carro};
+export default Carro;

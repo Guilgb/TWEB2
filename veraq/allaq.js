@@ -45,9 +45,11 @@ class RepositoryCarro{
 
 
 carro = new Carro('Corsa', 2010);
+carro2 = new Carro('Chevette', 1984);
 
 controller = new ControllerCarro();
 
 controller.addCarro(carro);
+controller.addCarro(carro2);
 
 controller.listCarro();

@@ -1,13 +1,7 @@
-const num = 17
-let res = 0
-for(let i=2; i<=num/2; i++){
-    if(num % i == 0){
-        res++
-        break
-    }
-}
-if(res == 0){
-    console.log('Numero é primo')
+const num = 15
+
+if(num%2 == 1 ){
+    console.log('é par')
 }else{
-    console.log('Numero não é primo')
+    console.log('é impar')
 }

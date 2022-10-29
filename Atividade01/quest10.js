@@ -1,7 +1,9 @@
-const num = 15
+num = 1
 
-if(num%2 == 1 ){
-    console.log('é par')
+if(num > 0){
+    console.log('Numero é Positivo')
+}else if(num == 0){
+    console.log('Numero é Nulo')
 }else{
-    console.log('é impar')
+    console.log('Numero é Negativo')
 }

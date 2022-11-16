@@ -1,17 +1,13 @@
-const inputForm = document.querySelector('#tarefa')
-const butt = document.querySelector('#add_button')
-const father = document.querySelector('.sub_list')
 
-butt.onclick = function(e){
-    e.preventDefealt()
+let tarefa = document.getElementById("tarefa")
+let button = document.getElementById("add_tarefa");
 
-    const chield = father.firstChild
+button.onclick = function(e){
+    e.preventDefault();
 
-    const createLi = document.createElement("li")
+    const li = document.createElement("li");
+    li.setAttribute("class", "sub-list");
+    li.innerHTML = `${tarefa.value}`;
 
-    createLi.setAttribute('class', 'sub_li')
-    createLi.innerHTML = `${inputForm.value}`
-
-    father.insertBefore(createLi, chield)
-    
 }
+button.addEventListener("click", e);

@@ -19,5 +19,23 @@ const addTask = function(event){
     
     document.querySelector("#tarefa").value = ""
 }
-
 button.addEventListener("click", addTask)
+
+const moveToFinish = function(e){
+    const taskFinish = e.target.innerText
+
+    finish.appendChild(taskFinish)
+    load.removeChild(taskFinish.target)
+
+    const newTaskFinish = document.createElement("li")
+    const newIco = document.createElement("i")
+    const deleteIco = document.createElement("i")
+
+    newIco.className = "fa fa-check-square-o"
+    deleteIco.className = "fa fa-trash-o delete-icon"
+
+    newTaskFinish.appendChild(newIco)
+    newTaskFinish.appendChild(deleteIco)
+    
+
+}

@@ -1,19 +1,7 @@
-let tarefa = document.getElementById("tarefa")
-let button = document.getElementById("add_tarefa");
-let father = document.getElementsByClassName("sub-list")
+const button = document.querySelector("#add_tarefa")
+const input = document.querySelector("#tarefa")
+const father = document.querySelector(".sub-list")
 
-button.onclick = function(){ {evento}};
-function evento(){
-    e.preventDefault();
-
-    let child = father.firstChild;
-    
-    let li = document.createElement("li");
-    li.setAttribute("class", "sub-list");
-    li.innerHTML = `${tarefa.value}`;
-
-    child.insertBefore(li, child);
-    tarefa.value = "";
-
+const addTask = function(event){
+    if(event) event.preventDefault();
 }
-button.addEventListener("click", evento);

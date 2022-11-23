@@ -20,8 +20,6 @@ button.onclick = function(event){
                 <span class="post__headerSpecial"
                 ><span class="material-icons post__badge"> verified </span>@somanathg</span
                 >
-                <button id="btn-delete" type="submit" class="editar">Deletar</button>
-                <button id="btn-edit" type="submit" class="editar">Editar</button>
             </h3>
             </div>
             <div class="post__headerDescription">

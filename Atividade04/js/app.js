@@ -35,8 +35,12 @@ buttons.forEach((btn) => {
             // Executar e mostrar a resposta em tempo real
             if (btn.classList.contains('num_btn')) {
 
-                answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
-
+                answerScreen.innerHTML = realTimeScreenValue.join('');
+                num = []
+                num.push(realTimeScreenValue)
+                num.forEach(element => {
+                   console.log(element) 
+                });
             }
 
         }

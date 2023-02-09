@@ -1,7 +1,8 @@
 import { useRef, useState, useEffect } from "react"
 import napster from "../services/napster"
+import Card from '@mui/material/Card';
 
-function Player({ song }) {
+function Player() {
 
     const [isPlaying, setIsPlaying] = useState(false)
     const [tracks, setTracks] = useState([])
@@ -48,19 +49,20 @@ function Player({ song }) {
     }
 
     return (
-        <div>
-            {isPlaying ? (
-                <h2>Está tocando a música: {song?.name}</h2>
-            ) : (
-                <h2>A música está parada</h2>
-            )}
-            <audio ref={music} src={song?.url || "https://listen.hs.llnwd.net/g2/prvw/4/2/4/9/8/911189424.mp3"} ></audio>
-            <button>Anterior</button>
-            <button onClick={ isPlaying ? pause : play}>
-                { isPlaying ? "pause" : "play"}
-            </button>
-            <button onClick={ next }>Próximo</button>
-        </div>
+            <div>
+                {isPlaying ? (
+                    <h2>Está tocando a música: {tracks[currentIndex]?.name}</h2>
+                ) : (
+                    <h2>A música está parada</h2>
+                )}
+                <h1> {tracks[currentIndex]?.artistName} </h1>
+                <audio ref={music} src={tracks[currentIndex]?.previewURL || "https://listen.hs.llnwd.net/g2/prvw/4/2/4/9/8/911189424.mp3"} > </audio>
+                <button onClick={ prev }>Anterior</button>
+                <button onClick={ isPlaying ? pause : play}>
+                    { isPlaying ? "pause" : "play"}
+                </button>
+                <button onClick={ next }>Próximo</button>
+            </div>
     )
 }
 

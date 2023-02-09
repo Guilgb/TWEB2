@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Player from "./components/Player"
+import Testando from "./components/Testando"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <h1>MP3 Player</h1>
-      <Player song={"Isto é uma música"} />
+        <Routes>
+            <Route path='/' element={<Testando/>} />
+        </Routes>
+      
     </div>
   )
 }

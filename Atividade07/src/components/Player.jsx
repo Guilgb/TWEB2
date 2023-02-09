@@ -18,7 +18,7 @@ function Player({ song }) {
     }, [tracks])
 
     const getMusics = async () => {
-        let musics = await napster.get(`top?apikey=${key}`).then(r => r)
+        let musics = await napster.get(`top?apikey=${key}`).then((r) => r)
         setTracks(musics.data.tracks)
     }
 
@@ -39,11 +39,12 @@ function Player({ song }) {
 
     const next = () => {
         setCurrentIndex(i => i > 19 ?  0 : i + 1)
+        loadSong(currentIndex + 1)
     }
 
     const prev = () => {
         setCurrentIndex(i => i < 0 ?  19 : i - 1)
-        loadSong(currentIndex)
+        loadSong(currentIndex - 1)
     }
 
     return (

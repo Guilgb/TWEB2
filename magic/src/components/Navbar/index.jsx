@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          Sol RIng
+          Sol Ring
         </Link>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

@@ -1,0 +1,14 @@
+.card-group {
+    width: 30rem;
+}
+.card {
+    height: 42rem;
+}
+
+.card-img-top {
+    width: 29.8rem;
+}
+
+.alinhar {
+    align-items: center;
+}

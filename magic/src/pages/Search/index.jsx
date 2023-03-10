@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import MagicCard from "../../components/MagicCard";
 
+import "./searchStyle.css"
 import scryfail from "../../services/scryfail";
 
 const searchURL = import.meta.env.VITE_SEARCH;
@@ -19,19 +20,27 @@ const Search = () => {
   };
 
   useEffect(() => {
-    const searchWithQueryURL = `${searchURL}?order=cmc&q=${query}`;
+    const searchWithQueryURL = `${searchURL}/cards/named?fuzzy=${query}`;
     getSearchCard(searchWithQueryURL);
   }, [query]);
 
   return (
-    <div>
-      <h4>
-        Resultados para: <span>{query}</span>
-      </h4>
-      <div>
-        {cards &&
-          cards.map((card) => <MagicCard key={card.id} card={card} />)}
-      </div>
+    <div className="alinhar">
+        <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src={cards.image_uris.png} alt="Card image cap"/>
+            <div class="card-body">
+            <h5 class="card-title">{cards.name}</h5>
+            <p class="card-text">{cards.oracle_text}</p>
+            <p class="card-text">{cards.flavor_text}</p>
+            </div>
+            <div class="card-footer">
+            <bigger class="text-muted">{cards.name}</bigger>
+            </div>
+        </div>
+
+        </div>
+
     </div>
   );
 };

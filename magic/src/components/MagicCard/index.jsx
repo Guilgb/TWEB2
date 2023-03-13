@@ -1,26 +1,35 @@
-import { Link } from "react-router-dom";
+// import React, { useState } from "react";
 
-const baseCardURL = import.meta.env.VITE_SEARCH_CARD;
-import './magicCardStyle.css'
+import "./magicCardStyle.css";
 
-function MagicCard({card, img}) {
+function MagicCard({ card }) {
+  // const [imagemErro, setImagemErro] = useState(false);
+
+  // function handleErroNaImagem() {
+  //   setImagemErro(true);
+  // }
+
+  const imgURL =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPopr4Hyh1Z1q2QHAws627IB7mtQuz1_qmeea5OZsRksongO0Mowi3x0uYUIOQNTpKdis&usqp=CAU";
+
   return (
-    <div className="alinhar">
-        <div class="card-group">
-            <div class="card">
-                <img class="card-img-top" src="" alt="Card image cap"/>
-                <div class="card-body">
-                    <h5 class="card-title">{card.name}</h5>
-                    <p class="card-text">{card.oracle_text}</p>
-                    <p class="card-text">{card.flavor_text}</p>
-                </div>
-                <div class="card-footer">
-                    <bigger class="text-muted">{card.name}</bigger>
-                </div>
-            </div>
+    <div className="card text-bg-dark" style={{ marginBottom: "10px" }}>
+      <div className="card-body">
+        <img src={imgURL} alt={"img card"} />
+        <h4 className="card-title">{card.name}</h4>
+        <p className="card-text">{card.type_line}</p>
 
-        </div>
-
+        {imagemErro ? (
+          <img
+            src={
+              "https://cards.scryfall.io/small/front/5/a/5aa90ab6-2686-4462-8725-5d4370c05437.jpg?1663738897"
+            }
+          />
+        ) : (
+          <img src={card["image_uris"]["small"]} onError={handleErroNaImagem} />
+        )}
+        {console.log(card.image_uris["small"])}
+      </div>
     </div>
   );
 }

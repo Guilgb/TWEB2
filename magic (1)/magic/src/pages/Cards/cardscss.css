@@ -1,0 +1,12 @@
+h3 {
+    text-align: left;
+    margin: 3.1rem;
+    color: #322c55;
+    font-weight: 900;
+    font-size: 30pt;
+}
+
+.container-card{
+    background-color: #FFF;
+    padding: 1rem;
+}

@@ -1,18 +1,17 @@
-.card-group {
-    width: 10rem;
-}
-.card {
-    height: 20rem;
-}
-
-.card-img-top {
-    width: 10rem;
-}
-
-.alinhar {
-    align-self: center;
-    align-content: center;
-    margin-top: 0.9rem;
-    display: inline-flex;
-    margin-left: 1rem;
-}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .cards-container div {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #111;
+  }
+  .card-body{
+    width: 18rem;
+    margin-bottom: 10px;
+  }

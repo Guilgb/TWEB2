@@ -1,0 +1,10 @@
+.cardSearch {
+    margin: auto;
+    width: 30rem;
+    padding-top: 3rem;
+}
+
+.card-body{
+    padding-top: 2rem;
+    width: 20rem;
+}

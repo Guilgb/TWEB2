@@ -10,3 +10,20 @@ h3 {
     background-color: #FFF;
     padding: 1rem;
 }
+
+button {
+    width: 10rem;
+}
+
+.butao_prev {
+    margin-left: 59rem;
+    color: #FFF;
+    background-color: #26335D;
+    border-radius: 0.7rem;
+}
+
+.butao_next {
+    color: #FFF;
+    background-color: #26335D;
+    border-radius: 0.7rem;
+}

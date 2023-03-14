@@ -45,9 +45,9 @@ const Cards = () => {
             <div className="cards-container">
                 {cards && cards.map((card) => <MagicCard card={card} />)}
             </div>
+        <button className="butao_next" disabled={ pageController === 1 ? true : false} onClick={() => {renderPage('back' )}}>Prev</button>
+        <button className="butao_prev" onClick={() => {renderPage('next')}}>Next</button>
         </div>
-        <button className="butao" disabled={ pageController === 1 ? true : false} onClick={() => {renderPage('back' )}}>Prev</button>
-        <button className="butao" onClick={() => {renderPage('next')}}>Next</button>
     </div>
   );
 };
